@@ -1,0 +1,142 @@
+body {
+  font-family: Tahoma, Verdana, SansSerif;
+  font-size: 2.3vmin;
+  background-color: #FBEDD9;
+  padding: 0;
+  margin: 0;
+}
+
+.mediumTitle {
+  text-align: center;
+  margin: 4vmin;
+  color: #675b49;
+}
+
+#chosenProduct {
+  display: grid;
+  grid-template-columns: 45vw 35vw;
+  margin: auto;
+  border: #675b49 solid 0.5vmin;
+  border-radius: 3vmin;
+  width: 80vw;
+  position: relative;
+}
+#chosenProduct img {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 3vmin;
+  border-bottom-left-radius: 3vmin;
+  width: 45vw;
+  height: 100%;
+}
+
+.productDescription {
+  display: block;
+  float: right;
+  width: 29vw;
+  margin: 1.5vw;
+  padding: 1.5vw;
+}
+.productDescription h1 {
+  color: #675b49;
+}
+
+@media (min-width: 1000px) {
+  .productDescription {
+    font-size: 1.6vw;
+  }
+}
+@media (max-width: 1000px) {
+  #chosenProduct {
+    display: block;
+    width: 80vmin;
+  }
+  #chosenProduct img {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top-left-radius: 3vmin;
+    border-top-right-radius: 3vmin;
+    border-bottom-left-radius: 0;
+  }
+  .productDescription {
+    float: none;
+    width: 70vmin;
+    margin: auto;
+    padding: 1.5vmin;
+  }
+}
+.clientForm {
+  padding: 2vmin;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+.clientForm h2 {
+  text-align: center;
+}
+.clientForm form {
+  display: inline-grid;
+  margin: 0 auto 0 auto;
+}
+.clientForm input[type=submit] {
+  margin: 2vmin auto;
+  font-size: 3vmin;
+  border: none;
+  background-color: #5f8881;
+  color: #e5ffff;
+  padding: 1.5vmin 2.4vmin 1.5vmin 2.4vmin;
+  border-radius: 15%;
+}
+.clientForm input[type=submit]:hover {
+  background-color: #3c5e56;
+  cursor: pointer;
+}
+.clientForm input[type=text], .clientForm input[type=tel], .clientForm input[type=email] {
+  margin: 1vmin;
+  width: 35vmin;
+  height: 3.5vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 1.5vmin;
+  font-size: 2.3vmin;
+}
+
+#clientFields {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+#orderPlaced {
+  margin: 2vmin;
+  color: #675b49;
+  display: block;
+  text-align: center;
+}
+#orderPlaced a {
+  margin: 1vmin;
+  text-decoration: none;
+  font-size: 3vmin;
+  border: none;
+  background-color: #5f8881;
+  color: #e5ffff;
+  padding: 1.5vmin 2.4vmin 1.5vmin 2.4vmin;
+  border-radius: 4vmin;
+}
+#orderPlaced a:hover {
+  background-color: #3c5e56;
+  cursor: pointer;
+}
+#orderPlaced a:active {
+  background-color: #5f8881;
+}
+
+#warningP {
+  text-align: center;
+  color: #e16c68;
+  text-decoration: underline;
+}

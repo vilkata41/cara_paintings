@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "quickSCSSCompile": "gulp"
+  },
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
+  },
+  "name": "caraproject",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,154 @@
+$sixtyColor: #FBEDD9;
+$thirtyColor: #675b49;
+$tenColor: #5f8881;
+$tenDarkerColor: #3c5e56;
+$neutralColor: #e5ffff;
+$red: #e16c68;
+
+body{
+  font-family: Tahoma, Verdana, SansSerif;
+  font-size: 2.3vmin;
+  background-color: $sixtyColor;
+  padding: 0;
+  margin: 0;
+}
+
+.mediumTitle{
+  text-align: center;
+  margin: 4vmin;
+  color: $thirtyColor;
+}
+
+#chosenProduct{
+  display: grid;
+  grid-template-columns: 45vw 35vw;
+  margin: auto;
+  border: $thirtyColor solid 0.5vmin;
+  border-radius: 3vmin;
+  width: 80vw;
+  position: relative;
+  img{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 3vmin;
+    border-bottom-left-radius: 3vmin;
+    width: 45vw;
+    height: 100%;
+  }
+}
+
+.productDescription{
+  display: block;
+  float: right;
+  width: 29vw;
+  margin: 1.5vw;
+  padding: 1.5vw;
+  h1 {
+    color: $thirtyColor;
+  }
+}
+
+@media (min-width: 1000px){
+  .productDescription{
+    font-size: 1.6vw;
+  }
+}
+
+@media (max-width: 1000px){
+  #chosenProduct{
+    display: block;
+    width: 80vmin;
+    img{
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top-left-radius: 3vmin;
+      border-top-right-radius: 3vmin;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .productDescription{
+    float: none;
+    width: 70vmin;
+    margin: auto;
+    padding: 1.5vmin;
+  }
+}
+
+.clientForm{
+  padding: 2vmin;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  h2{
+    text-align: center;
+  }
+  form{
+    display: inline-grid;
+    margin: 0 auto 0 auto;
+  }
+  input[type=submit]{
+    margin: 2vmin auto;
+    font-size: 3vmin;
+    border: none;
+    background-color: $tenColor;
+    color: $neutralColor;
+    padding: 1.5vmin 2.4vmin 1.5vmin 2.4vmin;
+    border-radius: 15%;
+
+    &:hover {
+      background-color: $tenDarkerColor;
+      cursor: pointer;
+    }
+  }
+  input[type=text], input[type=tel], input[type=email]{
+    margin: 1vmin;
+    width: 35vmin;
+    height: 3.5vmin;
+    padding: 1vmin 2vmin;
+    border-radius: 1.5vmin;
+    font-size: 2.3vmin;
+  }
+}
+
+#clientFields{
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+#orderPlaced{
+  margin: 2vmin;
+  color: $thirtyColor;
+  display: block;
+  text-align: center;
+  a{
+    margin: 1vmin;
+    text-decoration: none;
+    font-size: 3vmin;
+    border: none;
+    background-color: $tenColor;
+    color: $neutralColor;
+    padding: 1.5vmin 2.4vmin 1.5vmin 2.4vmin;
+    border-radius: 4vmin;
+
+    &:hover {
+      background-color: $tenDarkerColor;
+      cursor: pointer;
+    }
+    &:active{
+      background-color: $tenColor;
+    }
+  }
+}
+
+#warningP{
+  text-align: center;
+  color: $red;
+  text-decoration: underline;
+}

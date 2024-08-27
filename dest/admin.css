@@ -1,0 +1,211 @@
+body {
+  font-family: Tahoma, Verdana, SansSerif;
+  font-size: 2vmin;
+  background-color: #FBEDD9;
+  margin: 0;
+}
+
+.sign-in {
+  margin-top: 40vmin;
+}
+.sign-in form {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+.sign-in input[type=password] {
+  display: block;
+  margin-top: 1vmin;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35vmin;
+  height: 3.5vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 1.5vmin;
+  font-size: 2.3vmin;
+}
+.sign-in input[type=submit] {
+  display: block;
+  margin: 5% auto 5% auto;
+  font-size: 3vmin;
+  border: none;
+  background-color: #5f8881;
+  color: #FBEDD9;
+  padding: 1.5vmin 2.4vmin 1.5vmin 2.4vmin;
+  border-radius: 15%;
+}
+.sign-in input[type=submit]:hover {
+  background-color: #3c5e56;
+  cursor: pointer;
+}
+
+#ordersList {
+  padding: 3vmin;
+}
+
+.section_title {
+  text-align: center;
+  margin-top: 8vmin;
+  color: #675b49;
+  font-size: 4vmin;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+tr:hover {
+  background-color: #a0afaf;
+}
+
+@media (max-width: 1000px) {
+  #orders {
+    display: flex;
+    font-size: 2.4vmin;
+  }
+  #orders tr {
+    display: block;
+    width: 60vw;
+    margin-bottom: 1vmin;
+  }
+  #orders tr:hover {
+    background-color: #FBEDD9;
+  }
+  #orders th {
+    display: none;
+  }
+  #orders td {
+    min-height: 3vmin;
+    display: block;
+    text-align: right;
+  }
+  #orders td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    float: left;
+  }
+  #orders .deleteButton {
+    width: 25vmin;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.8vmin;
+  }
+}
+#orders {
+  overflow: auto;
+}
+#orders td, #orders th {
+  border-style: solid;
+  border-color: #675b49;
+  border-width: 0.25vmin;
+  padding: 1vmin;
+}
+
+.hide\/show, .newButton {
+  display: block;
+  margin: 1vmin auto 1vmin auto;
+  font-size: 2.7vmin;
+  border: none;
+  background-color: #5f8881;
+  color: #FBEDD9;
+  padding: 2vmin 3vmin 2vmin 3vmin;
+  border-radius: 1.5vmin;
+}
+.hide\/show:hover, .newButton:hover {
+  background-color: #3c5e56;
+  cursor: pointer;
+}
+
+.deleteButton {
+  display: block;
+  margin: 1vmin auto 1vmin auto;
+  font-size: 2.2vmin;
+  border: none;
+  background-color: #ffa9a9;
+  color: #FBEDD9;
+  padding: 1vmin 2vmin 1vmin 2vmin;
+  border-radius: 1.5vmin;
+}
+.deleteButton:hover {
+  background-color: #bd7373;
+  cursor: pointer;
+}
+
+#paintingsList {
+  display: none;
+  position: absolute;
+  top: 10vmin;
+  width: 70vw;
+  margin: 0 10vw;
+  background-color: #FBEDD9;
+  border: #675b49 solid 0.3vmin;
+  border-radius: 3vmin;
+  padding: 5vmin 5vw 5vmin 5vw;
+}
+
+#paintingsTable {
+  padding: 1vmin;
+}
+#paintingsTable tr:nth-child(2n+1) {
+  background-color: #e1cebb;
+}
+#paintingsTable tr:nth-child(2n+1):hover {
+  background-color: #a0afaf;
+}
+#paintingsTable th, #paintingsTable td {
+  padding: 0 1vmin 1vmin 1vmin;
+}
+
+#addPaintingDiv {
+  display: none;
+  border: 0.4vmin solid #675b49;
+  border-radius: 2vmin;
+  padding: 3vmin;
+}
+#addPaintingDiv input, #addPaintingDiv label {
+  display: block;
+}
+#addPaintingDiv label {
+  margin: 1vmin 5vmin 0 5vmin;
+}
+#addPaintingDiv input[type=text], #addPaintingDiv input[type=date], #addPaintingDiv input[type=file] + label {
+  margin: 1vmin 5vmin 0 5vmin;
+  width: 70%;
+  height: 3.5vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 1.5vmin;
+  font-size: 2.3vmin;
+}
+#addPaintingDiv textarea {
+  margin: 1vmin 5vmin 0 5vmin;
+  width: 80%;
+  height: 18vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 1.5vmin;
+  font-size: 2.3vmin;
+}
+#addPaintingDiv input[type=file] + label {
+  color: #FBEDD9;
+  width: 30vmin;
+  background-color: #5f8881;
+  text-align: center;
+}
+#addPaintingDiv input[type=file] + label:hover {
+  background-color: #3c5e56;
+  cursor: pointer;
+}
+
+.inputImage {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#errorsMessage {
+  color: #e16c68;
+  font-size: 2.4vmin;
+}

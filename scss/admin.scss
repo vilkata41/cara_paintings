@@ -1,0 +1,224 @@
+$sixtyColor: #FBEDD9;
+$slightlyDarkerSixty: #e1cebb;
+$thirtyColor: #675b49;
+$tenColor: #5f8881;
+$tenHoverColor: #3c5e56;
+$disabledButtonColor: #a0afaf;
+
+$deleteButton: #ffa9a9;
+$deleteButtonHover: #bd7373;
+$red: #e16c68;
+
+body{
+  font-family: Tahoma, Verdana, SansSerif;
+  font-size: 2vmin;
+  background-color: $sixtyColor;
+  margin: 0;
+}
+
+.sign-in{
+  margin-top: 40vmin;
+  form{
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+  }
+
+  input[type=password]{
+    display:block;
+    margin-top: 1vmin;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35vmin;
+    height: 3.5vmin;
+    padding: 1vmin 2vmin;
+    border-radius: 1.5vmin;
+    font-size: 2.3vmin;
+  }
+  input[type=submit]{
+    display:block;
+    margin: 5% auto 5% auto;
+    font-size: 3vmin;
+    border: none;
+    background-color: $tenColor;
+    color: $sixtyColor;
+    padding: 1.5vmin 2.4vmin 1.5vmin 2.4vmin;
+    border-radius: 15%;
+    &:hover{
+      background-color: $tenHoverColor;
+      cursor: pointer;
+    }
+  }
+}
+
+#ordersList{
+  padding: 3vmin;
+}
+
+.section_title{
+  text-align: center;
+  margin-top: 8vmin;
+  color: $thirtyColor;
+  font-size: 4vmin;
+}
+
+table{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+tr:hover{
+  background-color: $disabledButtonColor;
+}
+
+@media (max-width: 1000px){
+  #orders{
+    display: flex;
+    font-size: 2.4vmin;
+    tr{
+      display: block;
+      width: 60vw;
+      margin-bottom: 1vmin;
+      &:hover{
+        background-color: $sixtyColor;
+      }
+    }
+    th{
+      display: none;
+    }
+    td{
+      min-height: 3vmin;
+      display: block;
+      text-align: right;
+      &::before{
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+      }
+    }
+    .deleteButton{
+      width: 25vmin;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 2.8vmin;
+    }
+  }
+}
+
+#orders{
+  overflow: auto;
+  td, th{
+    border-style: solid;
+    border-color: $thirtyColor;
+    border-width: 0.25vmin;
+    padding: 1vmin;
+  }
+}
+
+.hide\/show, .newButton{
+  display: block;
+  margin: 1vmin auto 1vmin auto;
+  font-size: 2.7vmin;
+  border: none;
+  background-color: $tenColor;
+  color: $sixtyColor;
+  padding: 2vmin 3vmin 2vmin 3vmin;
+  border-radius: 1.5vmin;
+  &:hover{
+    background-color: $tenHoverColor;
+    cursor: pointer;
+  }
+}
+
+.deleteButton{
+  display:block;
+  margin: 1vmin auto 1vmin auto;
+  font-size: 2.2vmin;
+  border: none;
+  background-color: $deleteButton;
+  color: $sixtyColor;
+  padding: 1vmin 2vmin 1vmin 2vmin;
+  border-radius: 1.5vmin;
+  &:hover{
+    background-color: $deleteButtonHover;
+    cursor: pointer;
+  }
+}
+
+#paintingsList{
+  display: none;
+  position: absolute;
+  top: 10vmin;
+  width: 70vw;
+  margin: 0 10vw;
+  background-color: $sixtyColor;
+  border: $thirtyColor solid 0.3vmin;
+  border-radius: 3vmin;
+  padding: 5vmin 5vw 5vmin 5vw;
+}
+
+#paintingsTable{
+  tr:nth-child(2n+1){
+    background-color: $slightlyDarkerSixty;
+    &:hover{
+      background-color: $disabledButtonColor;
+    }
+  }
+  padding: 1vmin;
+  th,td{
+    padding: 0 1vmin 1vmin 1vmin;
+  }
+}
+
+#addPaintingDiv{
+  display: none;
+  border: 0.4vmin solid $thirtyColor;
+  border-radius: 2vmin;
+  padding: 3vmin;
+  input,label{
+    display:block;
+  }
+  label{
+    margin: 1vmin 5vmin 0 5vmin;
+  }
+  input[type=text], input[type=date], input[type=file] + label{
+    margin: 1vmin 5vmin 0 5vmin;
+    width: 70%;
+    height: 3.5vmin;
+    padding: 1vmin 2vmin;
+    border-radius: 1.5vmin;
+    font-size: 2.3vmin;
+  }
+  textarea{
+    margin: 1vmin 5vmin 0 5vmin;
+    width: 80%;
+    height: 18vmin;
+    padding: 1vmin 2vmin;
+    border-radius: 1.5vmin;
+    font-size: 2.3vmin;
+  }
+  input[type=file] + label{
+    color: $sixtyColor;
+    width: 30vmin;
+    background-color: $tenColor;
+    text-align: center;
+    &:hover{
+      background-color: $tenHoverColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.inputImage{
+  position:absolute;
+  z-index:-1;
+  opacity:0;
+}
+
+#errorsMessage{
+  color: $red;
+  font-size: 2.4vmin;
+}
